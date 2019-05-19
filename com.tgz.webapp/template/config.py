@@ -10,6 +10,7 @@ class Dict(dict):
 
     def __getattr__(self, key):
         try:
+
             return self[key]
         except KeyError:
             raise AttributeError("object has no attribute")

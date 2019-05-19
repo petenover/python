@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e671fec-b1c5-41b1-a7d8-d7b5b02f3446" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/com.tgz.webapp/template/static/img/timg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com.tgz.webapp/template/static/img/timg_add.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.tgz.webapp/template/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/com.tgz.webapp/template/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.tgz.webapp/template/config_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/com.tgz.webapp/template/config_default.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.tgz.webapp/template/config_override.py" beforeDir="false" afterPath="$PROJECT_DIR$/com.tgz.webapp/template/config_override.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.tgz.webapp/template/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/com.tgz.webapp/template/handlers.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,18 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com.tgz.webapp/template/handlers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="334" column="32" selection-start-line="334" selection-start-column="32" selection-end-line="334" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.tgz.webapp/template/orm.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -62,11 +44,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.tgz.webapp/template/config_default.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
               <caret line="2" column="7" selection-start-line="2" selection-end-line="2" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/com.tgz.webapp/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1292">
+              <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -184,6 +175,7 @@
         <option value="$PROJECT_DIR$/com.tgz.webapp/template/config_default.py" />
         <option value="$PROJECT_DIR$/com.tgz.webapp/template/coroweb.py" />
         <option value="$PROJECT_DIR$/com.tgz.webapp/template/handlers.py" />
+        <option value="$PROJECT_DIR$/com.tgz.webapp/.gitignore" />
       </list>
     </option>
   </component>
@@ -210,12 +202,6 @@
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
               <item name="com.tgz.webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="com.tgz.webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -376,12 +362,20 @@
       <workItem from="1557886486494" duration="13856000" />
       <workItem from="1557927772231" duration="4311000" />
       <workItem from="1557970584416" duration="3040000" />
-      <workItem from="1558234749467" duration="1427000" />
+      <workItem from="1558234749467" duration="1945000" />
     </task>
+    <task id="LOCAL-00001" summary="remove file">
+      <created>1558236684812</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558236684812</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194974000" />
+    <option name="totallyTimeSpent" value="195492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
@@ -411,6 +405,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="remove file" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove file" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/aiomysql/sa/result.py">
@@ -763,6 +761,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="7" selection-start-line="2" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.tgz.webapp/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
         </state>
       </provider>
     </entry>
