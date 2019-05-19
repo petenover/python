@@ -42,8 +42,11 @@ configs = config_default.configs
 
 try:
     import config_override
+    import logging
 
     configs = merge(configs, config_override.configs)
+    logging.info(configs)
+    logging.info(config_override.configs)
 except ImportError:
     pass
 
