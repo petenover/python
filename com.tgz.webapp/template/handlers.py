@@ -1,3 +1,5 @@
+import os
+
 from coroweb import get, post
 from models import User, Blog, Comment, next_id
 import time, hashlib, logging, json, re
@@ -121,7 +123,7 @@ def manage_edit_blog(*, id):
 
 
 def check_admin(request):
-    if request.__user__ is None or not request.__user__.admin:
+    if request.__user__ is None:
         return False
     return True
 
@@ -151,13 +153,13 @@ def manage_comments(*, page="1"):
 
 
 @get('/api/blogs')  # 获取日志
-async def api_blogs(*, page='1'):
+async def api_blogs(request, *, page='1'):
     page_index = get_page_index(page)
     num = await Blog.findNumber('count(id)')
     p = Page(num, page_index)
     if num == 0:
         return dict(page=p, blogs=())
-    blogs = await Blog.findAll(orderBy='created_at desc', limit=(p.offset, p.limit))
+    blogs = await Blog.findAll('user_id=?', [request.__user__.id], orderBy='created_at desc', limit=(p.offset, p.limit))
     return Response.success(dict(page=p, blogs=blogs))
 
 
@@ -245,7 +247,12 @@ _RE_SHA1 = re.compile(r'^[0-9a-f]{40}$')
 
 
 @post('/api/users')
-async def api_register_user(*, email, name, passwd):
+async def api_register_user(*, email, name, passwd, image):
+    logging.info('the image is %s' % image)
+    path = os.path.join('static/img', image.filename)
+    with open(path, 'wb') as f:
+        f.write(image.file.read())
+    p = 'http://%s:%s/%s' % (configs.host, configs.port, path)
     if not name or not name.strip():
         raise APIValueError('name')
     if not email or not _RE_EMAIL.match(email):
@@ -258,7 +265,7 @@ async def api_register_user(*, email, name, passwd):
     uid = next_id()
     sha1_passwd = '%s:%s' % (uid, passwd)
     user = User(id=uid, name=name.strip(), email=email, passwd=hashlib.sha1(sha1_passwd.encode('utf-8')).hexdigest(),
-                image='http://www.gravatar.com/avatar/%s?d=mm&s=120' % hashlib.md5(email.encode('utf-8')).hexdigest())
+                image=p)
     await user.save()
     # 生成cookie
     r = web.Response()
@@ -266,7 +273,7 @@ async def api_register_user(*, email, name, passwd):
     user.passwd = '******'
     r.content_type = 'application/json'
     r.body = json.dumps(user, ensure_ascii=False).encode('utf-8')
-    return Response.success(r)
+    return Response.success(user)
 
 
 @get('/api/users')

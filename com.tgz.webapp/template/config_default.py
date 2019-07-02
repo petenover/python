@@ -10,6 +10,8 @@ configs = {
         'db': 'webapp'
 
     },
+    'host': '',
+    'port': '',
     'session': {
         'secret': 'Awesome'
     }

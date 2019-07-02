@@ -10,6 +10,7 @@ class Dict(dict):
 
     def __getattr__(self, key):
         try:
+
             return self[key]
         except KeyError:
             raise AttributeError("object has no attribute")
@@ -42,8 +43,11 @@ configs = config_default.configs
 
 try:
     import config_override
+    import logging
 
     configs = merge(configs, config_override.configs)
+    logging.info(configs)
+    logging.info(config_override.configs)
 except ImportError:
     pass
 
